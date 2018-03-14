@@ -1,4 +1,4 @@
-package ua.olebas.pft.addressbook;
+package ua.olebas.pft.addressbook.model;
 
 public class GroupData {
     private final String name;
