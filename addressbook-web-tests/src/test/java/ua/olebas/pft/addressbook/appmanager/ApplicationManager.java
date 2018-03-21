@@ -25,13 +25,13 @@ public class ApplicationManager {
         // System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\webdrivers\\chromedriver\\chromedriver.exe");
         // System.setProperty("webdriver.gecko.driver", "C:\\Program Files\\webdrivers\\geckodriver\\geckodriver.exe");
         // System.setProperty("webdriver.edge.driver", "C:\\Program Files\\webdrivers\\edgedriver\\MicrosoftWebDriver.exe");
-        if (browser == BrowserType.FIREFOX) {
+        if (browser.equals(BrowserType.FIREFOX)) {
             wd = new FirefoxDriver();
         }
-        else if (browser == BrowserType.EDGE) {
+        else if (browser.equals(BrowserType.EDGE)) {
             wd = new EdgeDriver();
         }
-        else if (browser == BrowserType.CHROME) {
+        else if (browser.equals(BrowserType.CHROME)) {
             wd = new ChromeDriver();
         }
 
