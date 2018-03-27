@@ -1,7 +1,6 @@
 package ua.olebas.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -14,7 +13,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void initContactCreation() {
-        click(By.linkText("add new"));
+        click(By.linkText("ADD_NEW"));
     }
 
     public void fillContactForm(ContactData contactData, boolean creation) {
@@ -38,7 +37,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public void initContactModification() {
-        click(By.xpath("//img[@alt='Edit']"));
+        click(By.xpath("//img[@alt='EDIT']"));
     }
 
     public void submitContactModification() {
