@@ -36,16 +36,16 @@ public class ContactHelper extends HelperBase {
         click(By.linkText("home page"));
     }
 
-    public void initContactModification() {
-        click(By.xpath("//img[@alt='EDIT']"));
+    public void initContactModification(int index) {
+        wd.findElements(By.xpath("//img[@alt='EDIT']")).get(index).click();
     }
 
     public void submitContactModification() {
         click(By.name("update"));
     }
 
-    public void selectContact() {
-        click(By.name("selected[]"));
+    public void selectContact(int index) {
+        wd.findElements(By.name("selected[]")).get(index).click();
     }
 
     public void deleteSelectedContacts() {
@@ -62,5 +62,9 @@ public class ContactHelper extends HelperBase {
 
     public boolean isThereAContact() {
         return isElementPresent(By.name("selected[]"));
+    }
+
+    public int getContactCount() {
+        return wd.findElements(By.name("selected[]")).size();
     }
 }
