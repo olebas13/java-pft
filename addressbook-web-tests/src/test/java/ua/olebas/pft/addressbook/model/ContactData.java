@@ -7,17 +7,24 @@ public class ContactData {
     private String secondname;
     private String group;
 
-    public ContactData(String firstname, String secondname, String group) {
+    public ContactData withFirstname(String firstname) {
         this.firstname = firstname;
-        this.secondname = secondname;
-        this.group = group;
+        return this;
     }
 
+    public ContactData withSecondname(String secondname) {
+        this.secondname = secondname;
+        return this;
+    }
+
+    public ContactData withGroup(String group) {
+        this.group = group;
+        return this;
+    }
 
     public String getFirstname() {
         return firstname;
     }
-
 
     public String getLastname() {
         return secondname;
