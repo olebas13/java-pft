@@ -3,9 +3,46 @@ package ua.olebas.pft.addressbook.model;
 
 public class ContactData {
 
+    private int id = Integer.MAX_VALUE;
     private String firstname;
     private String secondname;
     private String group;
+
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ContactData that = (ContactData) o;
+
+        if (id != that.id) return false;
+        return secondname != null ? secondname.equals(that.secondname) : that.secondname == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (secondname != null ? secondname.hashCode() : 0);
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "id=" + id +
+                ", secondname='" + secondname + '\'' +
+                '}';
+    }
+
+    public ContactData withId(int id) {
+        this.id = id;
+        return this;
+
+    }
 
     public ContactData withFirstname(String firstname) {
         this.firstname = firstname;
@@ -34,25 +71,4 @@ public class ContactData {
         return group;
     }
 
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "secondname='" + secondname + '\'' +
-                '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        ContactData that = (ContactData) o;
-
-        return secondname != null ? secondname.equals(that.secondname) : that.secondname == null;
-    }
-
-    @Override
-    public int hashCode() {
-        return secondname != null ? secondname.hashCode() : 0;
-    }
 }
