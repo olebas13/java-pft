@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.beust:jcommander:1.71">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/addressbook-web-tests/Could not find com.beust:jcommander:1.71.&#13;&#10;Searched in the following locations:&#13;&#10;    https:/repo.maven.apache.org/maven2/com/beust/jcommander/1.71/jcommander-1.71.pom&#13;&#10;    https:/repo.maven.apache.org/maven2/com/beust/jcommander/1.71/jcommander-1.71.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

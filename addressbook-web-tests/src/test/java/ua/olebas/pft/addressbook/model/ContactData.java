@@ -1,12 +1,15 @@
 package ua.olebas.pft.addressbook.model;
 
 
+import java.io.File;
+
 public class ContactData {
 
     private int id = Integer.MAX_VALUE;
     private String firstname;
     private String secondname;
     private String group;
+    private File photo;
 
     public int getId() {
         return id;
@@ -71,4 +74,12 @@ public class ContactData {
         return group;
     }
 
+    public File getPhoto() {
+        return photo;
+    }
+
+    public ContactData withPhoto(File photo) {
+        this.photo = photo;
+        return this;
+    }
 }
