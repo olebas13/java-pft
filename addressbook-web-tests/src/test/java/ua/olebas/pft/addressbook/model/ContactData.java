@@ -3,6 +3,7 @@ package ua.olebas.pft.addressbook.model;
 
 import java.io.File;
 
+
 public class ContactData {
 
     private int id = Integer.MAX_VALUE;
