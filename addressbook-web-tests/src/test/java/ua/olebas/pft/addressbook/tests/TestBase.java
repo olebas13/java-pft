@@ -5,12 +5,14 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import ua.olebas.pft.addressbook.appmanager.ApplicationManager;
 
-public class TestBase {
+import java.io.IOException;
 
-    protected static final ApplicationManager app = new ApplicationManager(BrowserType.CHROME);
+public class TestBase  {
+
+    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
 
     @BeforeSuite
-    public void setUp() {
+    public void setUp() throws IOException {
         app.init();
     }
 
